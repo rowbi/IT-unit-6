@@ -1,0 +1,249 @@
+/* About Us Section */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.about-us .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    border-radius: 1em;
+    background-color: #fcfcfc;
+}
+
+.coffee { 
+    width: 320px;
+    height: 100%;
+    margin: 0 auto 100px auto;
+    box-sizing: border-box;
+}
+
+/* Coffee Cup Styles */
+.coffee-bg-lid {
+    position: relative;
+    top: 176px;
+    left: 2px;
+    border-radius: 60%;
+    background: #e6e6e6;
+    width: 312px;
+    height: 35px;
+    z-index: -5;
+}
+.coffee-rim, .coffee-rim-bt {
+    position: relative;  
+    border-radius: 50%;
+    border-bottom: 3px solid #cdcdcd;
+    z-index: 10;
+}
+.coffee-rim {
+    top: 200px;
+    left: 13px;
+    width: 288px;
+    height: 25px;
+}
+.coffee-rim-bt {
+    top: 410px;
+    left: 70px;
+    width: 175px;
+    height: 65px;
+}
+.coffee-color {
+    position: relative;
+    top: 50px;
+    left: 8px;
+    border-radius: 50%;
+    border-bottom: 4px solid #fff;
+    border-top: 7px solid #262523;
+    background: #181818;
+    width: 302px;
+    height: 20px;
+    z-index: 5;
+}
+.coffee-cup {
+    position: relative;
+    top: 25px;
+    border-top: 360px solid #e6e6e6; 
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent; 
+    border-bottom: 16px solid #e6e6e6;
+    height: 0;
+    width: 155px;
+    border-radius: 5% 5% 45% 45%;
+    z-index: 4;
+}
+.coffee-shadow {
+    position: relative;
+    top: 0;
+    left: 20px;
+    background: #393c41; 
+    height: 20px;
+    width: 275px;
+    border-radius: 50%;
+    box-shadow: -1px 2px 10px 8px #393c41;
+}
+
+/* Steam Animation */
+.steam {
+    position: relative;
+    top: 40px;
+    left: 125px;
+    animation: steam 5s linear infinite 3s;
+}
+.steam:before,
+.steam:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    border-right: 0px solid transparent;
+    border-top: 2px solid #000000;
+    border-left: 5px solid #050505;
+    border-bottom: 2px solid transparent;
+    width: 40px;
+    height: 70px;
+    z-index: 4;
+    border-radius: 80% 0 10% 10%; 
+    transform: rotate(168deg) skewY(10deg);
+    filter: blur(7px);
+}
+.steam:after {
+    top: 40px;
+    left: -35px;
+    z-index: 4;
+    border-radius: 80% 0 10% 10%; 
+    transform: rotate(315deg) skewY(10deg);
+    filter: blur(7px);
+}
+
+/* Steam Keyframes */
+@keyframes steam {
+    0% { top: 100px; opacity: .075; visibility: visible; }
+    20% { top: 80px; opacity: 0.2; }
+    40% { top: 60px; opacity: 0.4; }
+    60% { top: 40px; opacity: 0.2; }
+    80% { top: 20px; opacity: .075; }
+    100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column; /* Stack content and coffee cup */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .about-us .content {
+        width: 100%; /* Take full width */
+        text-align: center;
+    }
+
+    .coffee {
+        width: 260px; /* Make coffee cup smaller */
+        margin: 20px auto; /* Adjust margin */
+        order: 1; /* Move coffee cup below content */
+    }
+
+    .coffee-cup {
+        width: 120px; /* Adjust coffee cup width */
+    }
+
+    .coffee-shadow {
+        width: 240px; /* Adjust shadow size */
+    }
+}
+
+@keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logo_items {
+    display: inline-block;
+    animation: 35s slides infinite linear;
+  }
+  
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+  
+  .logo_items img{
+    height: 100px;
+}
+
+#coffee-pour {
+    position: relative;
+    object-fit: cover;
+    object-position: 50% 55%;
+    width: 100%;
+    height: 300px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#coffee-pour {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 60%;
+    display: block;
+}
+
+#h2-index {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    padding: 10px 20px; 
+    border-radius: 5px;
+}
