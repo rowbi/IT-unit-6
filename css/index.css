@@ -1,4 +1,3 @@
-/* About Us Section */
 .about-us {
     display: flex;
     justify-content: space-between;
@@ -6,7 +5,7 @@
     padding: 50px;
     max-width: 1200px;
     margin: auto;
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .about-us .content {
@@ -32,7 +31,6 @@
     box-sizing: border-box;
 }
 
-/* Coffee Cup Styles */
 .coffee-bg-lid {
     position: relative;
     top: 176px;
@@ -214,7 +212,7 @@
     height: 100px;
 }
 
-#coffee-pour {
+#home-coffee-scene {
     position: relative;
     object-fit: cover;
     object-position: 50% 55%;
@@ -222,14 +220,8 @@
     height: 300px;
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
 
-#coffee-pour {
+.coffee-scene {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -246,4 +238,11 @@
     font-size: 3em;
     padding: 10px 20px; 
     border-radius: 5px;
+}
+
+
+#coffee-leaf {
+    height: 25empx;
+    width: 25em;
+    border-radius: 2em;
 }
