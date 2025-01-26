@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const extraInfoContainer = document.getElementById("extra-info-container");
 
     submitButton.addEventListener("click", function () {
-        // Scroll to the top of the page
         window.scrollTo({
             top: 0,
-            behavior: "smooth" // Smooth scroll
+            behavior: "smooth"
         });
 
         applicationForm.classList.remove("show");
